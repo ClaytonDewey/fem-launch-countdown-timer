@@ -1,0 +1,11 @@
+@use '../util' as *;
+
+.countdown {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+    margin-inline: auto;
+  }
+}

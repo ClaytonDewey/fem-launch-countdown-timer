@@ -1,0 +1,56 @@
+@use '../util' as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--clr-neutral-600);
+  color: var(--clr-neutral-0);
+  font-family: var(--ff-primary);
+}
+
+html {
+  background-image: var(--body-bg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+body {
+  position: relative;
+  background-image: var(--footer-bg);
+  background-repeat: no-repeat;
+  background-position: bottom 0 right rem(-127);
+  background-size: auto;
+  height: 100vh;
+  width: 100%;
+  padding-inline: rem(24);
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: rem(6.14);
+  max-width: rem(300);
+  margin-inline: auto;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: rem(1);
+  width: rem(1);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}

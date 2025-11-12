@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  --clr-primary-gray: hsl(237, 18%, 59%);
+  --clr-primary-red: hsl(345, 95%, 68%);
+
+  // Neutral
+  --clr-neutral-0: hsl(0, 0%, 100%);
+  --clr-neutral-100: hsl(236, 21%, 26%);
+  --clr-neutral-600: hsl(235, 16%, 14%);
+  --clr-neutral-900: hsl(234, 17%, 12%);
+
+  // Typography
+  --ff-primary: 'Red Hat Display', sans-serif;
+
+  // Images
+  --body-bg: url('../../images/bg-stars.svg');
+  --footer-bg: url('../../images/pattern-hills.svg');
+
+  --transition: all 0.3s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
+}
