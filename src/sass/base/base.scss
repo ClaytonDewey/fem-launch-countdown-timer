@@ -35,6 +35,7 @@ body {
   padding-inline: rem(24);
 
   @include breakpoint(medium) {
+    background-position: bottom center;
     padding-block-start: rem(132);
   }
 }
