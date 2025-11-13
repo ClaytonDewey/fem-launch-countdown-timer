@@ -2,11 +2,13 @@ import { Countdown, Footer } from './components';
 
 const App = () => {
   return (
-    <div>
-      <h1>We&rsquo;re launching soon</h1>
+    <>
+      <header className='header'>
+        <h1>We&rsquo;re launching soon</h1>
+      </header>
       <Countdown />
       <Footer />
-    </div>
+    </>
   );
 };
 export default App;

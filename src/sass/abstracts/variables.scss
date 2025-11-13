@@ -11,6 +11,14 @@
   --clr-neutral-600: hsl(235, 16%, 14%);
   --clr-neutral-900: hsl(234, 17%, 12%);
 
+  // Gradient
+  --body-gradient: linear-gradient(
+    to bottom,
+    #1d1e28 0%,
+    #261c2d 95%,
+    #261a2d 100%
+  );
+
   // Typography
   --ff-primary: 'Red Hat Display', sans-serif;
 

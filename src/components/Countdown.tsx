@@ -9,11 +9,13 @@ const Countdown = () => {
   ];
 
   return (
-    <section className='countdown__wrapper'>
-      {cardData.map(({ id, title, value }) => (
-        <Card key={id} label={title} number={value} />
-      ))}
-    </section>
+    <main>
+      <section className='countdown__wrapper'>
+        {cardData.map(({ id, title, value }) => (
+          <Card key={id} label={title} number={value} />
+        ))}
+      </section>
+    </main>
   );
 };
 export default Countdown;

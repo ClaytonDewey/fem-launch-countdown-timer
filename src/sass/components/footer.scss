@@ -1,6 +1,11 @@
 @use '../util' as *;
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
   &-socials {
     display: flex;
     align-items: center;
@@ -30,7 +35,7 @@
     text-align: center;
     font-size: rem(14);
     color: var(--clr-primary-gray);
-    margin-top: rem(32);
+    margin-block: rem(16);
 
     a:link {
       position: relative;

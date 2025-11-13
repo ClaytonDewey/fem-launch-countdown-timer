@@ -12,8 +12,8 @@ const Footer = () => {
               rel='noreferrer'
               className='footer-socials-link'>
               <Icon name='facebook' />
+              <span className='sr-only'>Follow on Facebook</span>
             </a>
-            <span className='sr-only'>Follow on Facebook</span>
           </li>
           <li>
             <a
@@ -22,8 +22,8 @@ const Footer = () => {
               rel='noreferrer'
               className='footer-socials-link'>
               <Icon name='pinterest' />
+              <span className='sr-only'>Pin on Pinterest</span>
             </a>
-            <span className='sr-only'>Pin on Pinterest</span>
           </li>
           <li>
             <a
@@ -32,8 +32,8 @@ const Footer = () => {
               rel='noreferrer'
               className='footer-socials-link'>
               <Icon name='instagram' />
+              <span className='sr-only'>Follow on Instagram</span>
             </a>
-            <span className='sr-only'>Follow on Instagram</span>
           </li>
         </ul>
       </nav>
