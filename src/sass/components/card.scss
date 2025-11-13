@@ -3,7 +3,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
   width: rem(70);
   height: rem(92);
@@ -14,22 +13,20 @@
   }
 }
 
-.timer {
-  &__number {
+.time {
+  &__section {
+    text-align: center;
+    width: 100%;
+  }
+
+  &__segment {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: rem(66.27);
+    display: block;
+    font-size: rem(36);
+    font-weight: 700;
+    height: rem(66.47);
     background-color: var(--clr-neutral-100);
     border-radius: rem(4);
-    font-size: rem(36);
-    letter-spacing: rem(-1.08);
-    text-align: center;
-    font-weight: 700;
-    color: var(--clr-primary-red);
-    height: rem(70);
-    width: 100%;
 
     &::after {
       content: '';
@@ -46,13 +43,6 @@
     @include breakpoint(medium) {
       height: rem(141);
       font-size: rem(80);
-      letter-spacing: rem(-2.4);
-      border-radius: rem(8);
-
-      &::after {
-        top: rem(10);
-        border-radius: rem(8);
-      }
     }
   }
 
@@ -66,6 +56,86 @@
     @include breakpoint(medium) {
       font-size: rem(14);
       letter-spacing: rem(5.92);
+    }
+  }
+}
+
+.segment {
+  &__display {
+    position: relative;
+    height: 100%;
+
+    &-top,
+    &-bottom {
+      overflow: hidden;
+      text-align: center;
+      width: 100%;
+      height: 50%;
+      position: relative;
+    }
+
+    &-top {
+      line-height: 1.85;
+      color: var(--clr-primary-red);
+    }
+
+    &-bottom {
+      line-height: 0;
+      color: var(--clr-primary-red);
+    }
+
+    @include breakpoint(medium) {
+      &-top {
+        line-height: 1.8;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    perspective: rem(400);
+    height: 100%;
+    width: 100%;
+    color: var(--clr-primary-red);
+
+    &-top,
+    &-bottom {
+      position: absolute;
+      overflow: hidden;
+      text-align: center;
+      width: 100%;
+      height: 50%;
+    }
+
+    &-top {
+      top: 0;
+      line-height: 1.85;
+      color: var(--clr-primary-red);
+      background-color: rgba(0, 0, 0, 0.15);
+      transform-origin: bottom;
+    }
+
+    &-bottom {
+      bottom: 0;
+      line-height: 0;
+      border-top: rem(2) solid rgba(0, 0, 0, 0.25);
+    }
+
+    &.flip {
+      .segment__overlay-top {
+        animation: flip-top 0.8s linear;
+      }
+
+      .segment__overlay-bottom {
+        animation: flip-bottom 0.8s linear;
+      }
+    }
+
+    @include breakpoint(medium) {
+      &-top {
+        line-height: 1.8;
+      }
     }
   }
 }
